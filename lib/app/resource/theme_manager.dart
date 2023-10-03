@@ -22,6 +22,9 @@ class ThemeManager {
     fontFamily: FontConstants.fontFamilyInter,
     colorScheme: ColorScheme.fromSeed(
       seedColor:AppColors.secondary,
+      secondary: AppColors.secondary,
+      onBackground: AppColors.third,
+      onSecondary: AppColors.white,
     ),
     useMaterial3: true,
     textTheme: const TextTheme(
@@ -33,6 +36,11 @@ class ThemeManager {
       titleMedium: TextStyle(
         color: AppColors.textPrimary,
         fontSize: FontSize.s18,
+      ),
+      titleLarge: TextStyle(
+        color: AppColors.black,
+        fontSize: FontSize.s18,
+        fontWeight: FontWeightManager.semiBold,
       ),
     )
   );
