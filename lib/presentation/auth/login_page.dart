@@ -16,6 +16,7 @@ import 'package:task_manager/app/resource/app_size.dart';
 import 'package:task_manager/app/resource/assets_manager.dart';
 import 'package:task_manager/app/resource/color_manager.dart';
 import 'package:task_manager/app/resource/font_manager.dart';
+import 'package:task_manager/presentation/main/main_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -122,7 +123,13 @@ class _Form extends StatelessWidget {
                     borderRadius: BorderRadius.circular(0),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => MainPage(),
+                    ),
+                  );
+                },
                 child: Text(
                   "Giriş Yap",
                   style: Theme.of(context).textTheme.titleLarge,
