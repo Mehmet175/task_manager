@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:task_manager/app/di/di.dart';
 import 'package:task_manager/app/resource/theme_manager.dart';
 import 'package:task_manager/presentation/auth/login_page.dart';
 
 void main() {
+  configureDependencies();
   runApp(const MyApp());
 }
 

@@ -12,27 +12,27 @@ Notes        :
 
 import 'package:flutter/material.dart';
 import 'package:task_manager/app/base/base_view_model.dart';
+import 'package:task_manager/app/di/di.dart';
 
 abstract class BaseView<T extends BaseViewModel> extends StatelessWidget {
-  const BaseView({super.key});
+  BaseView({super.key});
 
-  final T? viewModel = null;
+  final T viewModel = getIt<T>();
+  late final BuildContext context;
 
   @override
   Widget build(BuildContext context) {
+    this.context = context;
     return StatefulWrapper(
-      onInit: () {
-
-      },
-      child: _body(
-        context,
-        viewModel,
-      ),
+      onInit: onInit,
+      dispose: dispose,
+      child: buildB(),
     );
   }
 
-  Widget _body(BuildContext context, T? viewModel);
-  void viewModelReady(T? viewModel) {}
+  Widget buildB();
+  void onInit() {}
+  void dispose() {}
 }
 
 class StatefulWrapper extends StatefulWidget {
@@ -40,9 +40,11 @@ class StatefulWrapper extends StatefulWidget {
     super.key,
     required this.onInit,
     required this.child,
+    required this.dispose,
   });
 
   final VoidCallback onInit;
+  final VoidCallback dispose;
   final Widget child;
 
   @override
@@ -52,8 +54,14 @@ class StatefulWrapper extends StatefulWidget {
 class _StatefulWrapperState extends State<StatefulWrapper> {
   @override
   initState() {
-    super.initState();
     widget.onInit();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    widget.dispose();
+    super.dispose();
   }
 
   @override

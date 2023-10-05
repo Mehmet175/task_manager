@@ -11,11 +11,15 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   flutter_svg: ^2.0.7
+  injectable: ^2.3.1
+  get_it: ^7.6.4
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  injectable_generator: ^2.4.0
+  build_runner: ^2.4.6
 
 flutter:
   uses-material-design: true

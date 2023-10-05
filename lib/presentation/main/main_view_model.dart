@@ -12,9 +12,11 @@ Notes        :
 
 import 'dart:async';
 
+import 'package:injectable/injectable.dart';
 import 'package:task_manager/app/base/base_view_model.dart';
 import 'package:task_manager/app/enums/main_page_enum.dart';
 
+@Injectable()
 class MainViewModel extends BaseViewModel
     with MainViewModelInput, MainViewModelOutput {
 
