@@ -30,7 +30,7 @@ class MainPage extends BaseView<MainViewModel> {
   Widget _body(BuildContext context) {
     return Column(
       children: [
-        T
+
       ],
     );
   }
