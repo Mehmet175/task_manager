@@ -14,26 +14,23 @@ import 'package:flutter/material.dart';
 import 'package:task_manager/app/base/base_view_model.dart';
 import 'package:task_manager/app/di/di.dart';
 
-
 abstract class BaseView<T extends BaseViewModel> extends StatelessWidget {
   BaseView({super.key});
 
   final T viewModel = getIt<T>();
-  late final BuildContext context;
 
   @override
   Widget build(BuildContext context) {
-    this.context = context;
     return StatefulWrapper(
-      onInit: onInit,
-      dispose: dispose,
-      child: buildB(),
+      onInit: () => onInit.call(context),
+      dispose: () => dispose.call(context),
+      child: buildB(context),
     );
   }
 
-  Widget buildB();
-  void onInit() {}
-  void dispose() {}
+  Widget buildB(BuildContext context);
+  void onInit(BuildContext context) {}
+  void dispose(BuildContext context) {}
 }
 
 class StatefulWrapper extends StatefulWidget {

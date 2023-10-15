@@ -22,6 +22,7 @@ class AppColors {
   static const Color black = Color(0xFF000000);
   static const Color textPrimary = Color(0xFF8CAAB9);
   static const Color third = Color(0xFFFED36A);
+  static const Color unSelected = Color(0xFF263238);
 
 
 }

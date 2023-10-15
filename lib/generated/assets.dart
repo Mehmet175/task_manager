@@ -6,6 +6,7 @@ class Assets {
   static const String iconsCalenderIcon = 'assets/icons/calender_icon.svg';
   static const String iconsChatIcon = 'assets/icons/chat_icon.svg';
   static const String iconsHomeIcon = 'assets/icons/home_icon.svg';
+  static const String iconsMoreIcon = 'assets/icons/more_icon.svg';
   static const String iconsNotificationIcon = 'assets/icons/notification_icon.svg';
   static const String iconsPasswordIcon = 'assets/icons/password_icon.svg';
   static const String iconsUserIcon = 'assets/icons/user_icon.svg';

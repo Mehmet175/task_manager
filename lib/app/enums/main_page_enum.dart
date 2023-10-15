@@ -10,8 +10,11 @@ Notes        :
 
 */
 
+import 'package:flutter/cupertino.dart';
 import 'package:task_manager/app/resource/assets_manager.dart';
 import 'package:task_manager/app/resource/string_manager.dart';
+import 'package:task_manager/presentation/main/chat_list/chat_list_page.dart';
+import 'package:task_manager/presentation/main/group_list/group_list_page.dart';
 
 enum MainPageEnum {
   chats,
@@ -20,6 +23,11 @@ enum MainPageEnum {
   String get name => switch (this) {
         MainPageEnum.chats => AppStrings.chats,
         MainPageEnum.groups =>  AppStrings.groups,
+      };
+
+  Widget get page => switch (this) {
+        MainPageEnum.chats => ChatListPage(),
+        MainPageEnum.groups => GroupListPage(),
       };
 
 }

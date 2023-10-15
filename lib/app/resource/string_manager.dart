@@ -18,6 +18,7 @@ class AppStrings {
   static const String english = "english";
   static const String chats = "chats";
   static const String groups = "groups";
+  static const String messages = "messages";
 
 
 }

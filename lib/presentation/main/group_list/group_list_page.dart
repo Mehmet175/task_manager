@@ -5,27 +5,20 @@
 User         : mehmetalicubukcu
 Project Name : task_manager 
 Name         : Mehmet Ali ÇUBUKÇU
-Date         : 3.10.2023 23:48
+Date         : 15.10.2023 21:43
 Notes        : 
 
 */
 
+
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/framework.dart';
 import 'package:task_manager/app/base/base_view.dart';
-import 'package:task_manager/presentation/main/home/home_view_model.dart';
+import 'package:task_manager/presentation/main/group_list/group_list_view_model.dart';
 
-class HomePage extends BaseView<HomeViewModel> {
-  HomePage({super.key});
-
+class GroupListPage extends BaseView<GroupListViewModel> {
   @override
   Widget buildB(BuildContext context) {
-    return Scaffold(
-      body: _body(),
-    );
+    return Scaffold();
   }
-
-  Widget _body() {
-    return Container();
-  }
-
 }

@@ -22,6 +22,7 @@ class IconAssets {
   static const String chat = "$_iconPath/chat_icon.svg";
   static const String home = "$_iconPath/home_icon.svg";
   static const String notification = "$_iconPath/notification_icon.svg";
+  static const String more = "$_iconPath/more_icon.svg";
 }
 
 class AssetsManager {
