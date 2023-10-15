@@ -11,12 +11,21 @@ Notes        :
 */
 
 import 'package:flutter/material.dart';
+import 'package:task_manager/app/base/base_view.dart';
+import 'package:task_manager/presentation/main/home/home_view_model.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class HomePage extends BaseView<HomeViewModel> {
+  HomePage({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
+  Widget buildB() {
+    return Scaffold(
+      body: _body(),
+    );
   }
+
+  Widget _body() {
+    return Container();
+  }
+
 }

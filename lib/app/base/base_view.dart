@@ -14,6 +14,7 @@ import 'package:flutter/material.dart';
 import 'package:task_manager/app/base/base_view_model.dart';
 import 'package:task_manager/app/di/di.dart';
 
+
 abstract class BaseView<T extends BaseViewModel> extends StatelessWidget {
   BaseView({super.key});
 

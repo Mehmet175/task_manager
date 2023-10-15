@@ -3,7 +3,7 @@ class Assets {
   Assets._();
 
   static const String iconsAddIcon = 'assets/icons/add_icon.svg';
-  static const String iconsCalendarIcon = 'assets/icons/calender_icon.svg';
+  static const String iconsCalenderIcon = 'assets/icons/calender_icon.svg';
   static const String iconsChatIcon = 'assets/icons/chat_icon.svg';
   static const String iconsHomeIcon = 'assets/icons/home_icon.svg';
   static const String iconsNotificationIcon = 'assets/icons/notification_icon.svg';
@@ -16,5 +16,7 @@ class Assets {
   static const String interInterMedium = 'assets/fonts/inter/Inter-Medium.ttf';
   static const String interInterRegular = 'assets/fonts/inter/Inter-Regular.ttf';
   static const String interInterSemiBold = 'assets/fonts/inter/Inter-SemiBold.ttf';
+  static const String translationsEn = 'assets/translations/en.json';
+  static const String translationsTr = 'assets/translations/tr.json';
 
 }

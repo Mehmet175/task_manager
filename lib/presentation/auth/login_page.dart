@@ -16,6 +16,7 @@ import 'package:task_manager/app/resource/app_size.dart';
 import 'package:task_manager/app/resource/assets_manager.dart';
 import 'package:task_manager/app/resource/color_manager.dart';
 import 'package:task_manager/app/resource/font_manager.dart';
+import 'package:task_manager/presentation/main/home/home_page.dart';
 import 'package:task_manager/presentation/main/main_page.dart';
 
 class LoginPage extends StatelessWidget {
@@ -126,7 +127,7 @@ class _Form extends StatelessWidget {
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => MainPage(),
+                      builder: (context) => HomePage(),
                     ),
                   );
                 },

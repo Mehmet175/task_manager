@@ -24,50 +24,14 @@ class MainPage extends BaseView<MainViewModel> {
   Widget buildB() {
     return Scaffold(
       body: _body(context),
-      bottomNavigationBar: _BottomNavigationBar(
-        viewModel: viewModel,
-      ),
     );
   }
 
   Widget _body(BuildContext context) {
-    return HomePage();
-  }
-}
-
-class _BottomNavigationBar extends StatelessWidget {
-  const _BottomNavigationBar({
-    super.key,
-    required this.viewModel,
-  });
-
-  final MainViewModel viewModel;
-
-  @override
-  Widget build(BuildContext context) {
-    return StreamBuilder(
-      stream: viewModel.outputMainPageEnum,
-      builder: (context, snapshot) {
-        final current = MainPageEnum.values.firstWhere(
-          (element) => (snapshot.data ?? MainPageEnum.home) == element,
-        );
-        return BottomNavigationBar(
-          items: MainPageEnum.values
-              .map(
-                (e) => BottomNavigationBarItem(
-                  icon: SvgPicture.asset(
-                    e.icon,
-                  ),
-                  label: e.name,
-                ),
-              )
-              .toList(),
-          currentIndex: current.index,
-          selectedItemColor: Colors.amber[800],
-          onTap: (value) =>
-              viewModel.setMainPageEnum(MainPageEnum.values[value]),
-        );
-      },
+    return Column(
+      children: [
+        T
+      ],
     );
   }
 }

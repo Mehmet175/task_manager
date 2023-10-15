@@ -10,9 +10,16 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+
+  # Ui
   flutter_svg: ^2.0.7
+
+  # Di
   injectable: ^2.3.1
   get_it: ^7.6.4
+
+  # Localization
+  easy_localization: ^3.0.3
 
 dev_dependencies:
   flutter_test:
@@ -35,3 +42,4 @@ flutter:
 
   assets:
     - assets/icons/
+    - assets/translations/
